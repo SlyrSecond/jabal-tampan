@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: white;
+  background: linear-gradient(to bottom right, #6a11cb, #b491f7);
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: linear-gradient(to right, #7b2ff7, #b06ab3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #d3b2f7;
+}
+
+/* HOME SECTION */
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  background: linear-gradient(to right, #7b2ff7, #b491f7);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1,
+.home-content h3 {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.home-content h1 {
+  font-size: 60px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  margin-top: 10px;
+  color: #d3b2f7;
+}
+
+.home-content p {
+  position: relative;
+  font-size: 16px;
+  margin: 20px 0 40px;
+  line-height: 1.6;
+  color: #e6d9f7;
+}
+
+
+
+/* SOCIAL ICONS */
+.social-icons {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d3b2f7;
+  transform: scale(1.2);
+}
+
+.video-section video,
+.video-section iframe {
+  width: 100%;
+  max-width: 300px; /* Atur ukuran maksimal video */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px; /* Opsional: biar sudutnya membulat */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Opsional: efek bayangan */
+}
+
+
+/* KEYFRAMES */
+@keyframes showright {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Anggota</title>
+    <style>
+        /* Latar belakang gradasi */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background: linear-gradient(to right, #d400ff, #7e0896);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container Form */
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #d400ff;
+            outline: none;
+            box-shadow: 0 0 5px #d400ff(78, 84, 200, 0.5);
+        }
+
+        .radio-group {
+            margin-top: 10px;
+        }
+
+        .radio-group label {
+            margin-right: 15px;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #d400ff;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d400ff;
+        }
+
+        input[type="reset"] {
+            background-color: #d400ff;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #d400ff;
+        }
+
+        @media (max-width: 600px) {
+            .form-footer {
+                flex-direction: column;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registrasi Anggota</h2>
+        <form action="/submit-registration" method="POST">
+            <fieldset>
+                <legend>Data Diri</legend>
+
+                <label for="name">Nama Anda:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda" required>
+
+                <label for="username">Username Anda:</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan Username Anda" required>
+
+                <label for="email">Email Anda:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan Password Anda" required>
+
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="sex" value="Laki-laki" required> Laki-laki</label>
+                    <label><input type="radio" name="sex" value="Perempuan"> Perempuan</label>
+                </div>
+
+                <label for="agama">Agama:</label>
+                <select name="agama" id="agama" required>
+                    <option value="" disabled selected>Pilih Agama</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Budha">Budha</option>
+                    <option value="Katolik">Katolik</option>
+                    <option value="Hindu">Hindu</option>
+                </select>
+
+                <div class="form-footer">
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Hapus">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>
